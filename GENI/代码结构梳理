@@ -6,6 +6,14 @@ geni_train.py
     numpy
     dgl
     pickle:pickle模块是Python专用的持久化模块，可以持久化包括自定义类在内的各种数据，比较适合Python本身复杂数据的存贮。
-    os
-    sys
-   
+    os: 调用操作系统路径
+    sys：添加路径
+  导入的python文件：
+    geni： GENI创建模型
+    EarlyStopping: EarlyStopping_simple 判断训练是否提前结束
+    utils：set_random_seed, load_data, 
+    get_rank_metrics：计算ndcg分数
+    rank_evaluate：计算ndcg分数和损失
+    convert_to_gpu
+    get_centrality：计算图的入度的log值
+    metric：overlap:计算重叠分数
