@@ -1,11 +1,11 @@
 geni_train.py
   导入的包：
     argparse:argparse 是python自带的命令行参数解析包，可以用来方便地读取命令行参数
-    time
+    time:计算一下程序执行的时间
     torch
     numpy
     dgl
-    pickle
+    pickle:pickle模块是Python专用的持久化模块，可以持久化包括自定义类在内的各种数据，比较适合Python本身复杂数据的存贮。
     os
     sys
    
