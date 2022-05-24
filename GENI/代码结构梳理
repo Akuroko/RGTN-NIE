@@ -17,3 +17,7 @@ geni_train.py
     convert_to_gpu
     get_centrality：计算图的入度的log值
     metric：overlap:计算重叠分数
+
+代码流程：
+设置命令行传入参数
+main
