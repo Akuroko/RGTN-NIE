@@ -19,5 +19,8 @@ geni_train.py
     metric：overlap:计算重叠分数
 
 代码流程：
-设置命令行传入参数
-main
+1 设置命令行传入参数
+2 main
+  3 设置随机数seed
+  4 根据交叉验证次数进行循环：
+    加载数据utils.py  load_data:图、边类型、边特征长度、节点特征、标签、训练代数
