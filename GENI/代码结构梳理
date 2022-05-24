@@ -1,1 +1,11 @@
-
+geni_train.py
+  导入的包：
+    argparse:argparse 是python自带的命令行参数解析包，可以用来方便地读取命令行参数
+    time
+    torch
+    numpy
+    dgl
+    pickle
+    os
+    sys
+   
