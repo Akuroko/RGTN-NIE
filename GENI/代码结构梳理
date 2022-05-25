@@ -23,7 +23,21 @@ geni_train.py
 2 main
   3 设置随机数seed
   4 根据交叉验证次数进行循环：
-    5 加载数据utils.py  load_data:图、边类型、边特征长度、节点特征、标签、训练集编号、验证集编号、测试集编号
+    5 加载数据utils.py  load_data:图、边类型、边特征的种类、节点特征、标签、训练集编号、验证集编号、测试集编号
     6 添加自环
     7 修正边类型的向量表示长度
-    8 创建模型 geni.GENI
+    8 创建模型 geni.py   GENI：输入图、层数、关系数量、预维度、特征数量、隐藏层大小、heads、训练参数、中心性
+        建立Score Aggregation层  SA_layer.py SALayer
+            
+        建立heads 层
+    9 设置提前结束训练标记、设置损失函数、设置优化器
+    10 训练代数epoch：
+      11 模型进入训练模型
+      12 输入特征和边类型进行前向传播
+        geni.py GENI:
+         13 计算输入特征的分数（展开成1维）
+         14 计算边特征：边类型的向量化表示（embedding）
+         15 根据l层数，进行score aggregation
+            h = h.flatten(1).mean(-1, keepdim=True) 从第1维展开，计算最后一维的均值，保持维度不变
+         
+      
